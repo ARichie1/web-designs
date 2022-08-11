@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    color:green;
+}
+
+.head{
+    margin:10px 30px;
+}
+
+.faces{
+    display:flex;
+    margin:10px auto;
+}
+
+.face{
+    margin:10px;
+    border: 3px solid yellow;
+    width: 300px;
+    height: 300px;
+    padding:20px;
+    border-radius: 10%;
+    position: relative;
+    background-color: green;
+    overflow: hidden;
+}
+
+.block{
+    border:4px solid green;
+    position: absolute;
+    width:90% !important;
+    height:42%;
+    background-color: green;
+    z-index:1;
+}
+
+.theEyes{
+    position: relative;
+    width:100% !important;
+    height:50%;
+    background-color: green;
+    animation: move 10s infinite ease-in-out forwards;
+    transition: 10s ease-in-out;
+    z-index:2;
+}
+
+.eyes{
+    position: absolute;
+    width:40% !important;
+    height:80%;
+    border-radius: 100%;
+    background-color: yellow;
+    border:4px solid red;
+    margin:5%;
+}
+
+.retina{
+    width:50% !important;
+    height:50%;
+    border-radius: 100%;
+    background-color: #000;
+    border:4px solid #000;
+    margin:10% auto;
+}
+
+.one{left:-100%;}
+.two{left:-50%;}
+.three{left:0%;}
+.four{left:50%;}
+
+@keyframes move{
+    0%{transform: translateX(0%);}
+    25%{transform: translateX(50%);}
+    50%{transform: translateX(100%);}
+    75%{transform: translateX(50%);}
+    100%{transform: translateX(0%);}
+}
+
+.smile{
+    border:10px solid red;
+    border-radius: 50%;
+    position: absolute;
+    top:10%;
+    left:15%;
+    width:70%;
+    height:70%;
+    z-index:0;
+    border-top-color:yellow;
+    border-right-color:transparent;
+    border-bottom-color:yellow;
+    border-left-color:transparent;
+    animation: spin 10s infinite ease-in-out forwards;
+    transition: 10s ease-in-out;
+}
+
+.sad{
+    border:10px solid red;
+    border-radius: 50%;
+    position: absolute;
+    top:60%;
+    left:15%;
+    width:70%;
+    height:70%;
+    z-index:0;
+    border-top-color:yellow;
+    border-right-color:transparent;
+    border-bottom-color:yellow;
+    border-left-color:transparent;
+    animation: spin 10s infinite ease-in-out forwards;
+    transition: 10s ease-in-out;
+}
+
+.chill{
+    border:10px solid yellow;
+    position: absolute;
+    top:10%;
+    left:15%;
+    width:70%;
+    height:70%;
+    z-index:0;
+    border-top-color:transparent;
+    border-right-color:transparent;
+    border-bottom-color:yellow;
+    border-left-color:transparent;
+    animation: move_chill 10s infinite ease-in-out forwards;
+    transition: 10s ease-in-out;
+}
+
+@keyframes spin{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(180deg);}
+    50%{transform: rotate(360deg);}
+    75%{transform: rotate(180deg);}
+    100%{transform: rotate(0deg);}
+}
+
+@keyframes move_chill{
+    0%{transform: translateX(-100%);}
+    25%{transform: translateX(0%);}
+    50%{transform: translateX(100%);}
+    75%{transform: translateX(0%);}
+    100%{transform: translateX(-100%);}
+}
